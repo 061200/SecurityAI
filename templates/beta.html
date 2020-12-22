@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Smart Security</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{{ url_for('static', filename='css/mdb.min.css') }}"  rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{{ url_for('static', filename='css/style.min.css') }}"   rel="stylesheet">
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .carousel {
+      height: 60vh;
+    }
+
+    .feature-title{
+      font-weight: bold;
+    }
+    @media (max-width: 740px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+
+      html,
+      body,
+      header,
+      .carousel {
+        height: 100vh;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #929FBA !important;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="./home" target="_blank">
+          <strong>Smart Security</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./home">Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scroll" href="#target1" target="_blank">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./" target="_blank">Service</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./beta" target="_blank">Beta</a>
+              <span class="sr-only">(current)</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+  <!--Main layout-->
+  <main style="min-height:700px; padding-top:5vw;">
+    <div class="container">
+      <!--Section: Main info-->
+      <section class="mt-5 wow fadeIn">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+
+
+          <div class="col-md-6 mb-4">
+
+            <img src="{{ url_for('video_feed') }}" class="img-fluid z-depth-1-half">
+              <!-- <video
+              autoplay
+              playsinline
+              muted
+              id="player" class="img-fluid z-depth-1-half"></video>  -->
+
+
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+
+            <!-- Main heading -->
+            <h3 class="h3 mb-3">Smart Security의
+              <p></p>
+              Face 인식 기술 시연입니다.</h3>
+            <p>서비스를 이용하기 전에
+              <strong>안면인식 기술</strong>을 체험해보세요.</p>
+            <p>저희 Smart Security 인공지능은 딥러닝 기반으로 등록된 인물의 face 정보를 학습하여 인물을 구분합니다.</p>
+            <!-- Main heading -->
+
+            <hr>
+            
+            <p>
+              당신의 공간에 침입하려는 외부인에 대해 <strong>경고 알림</strong>을 보내 안전하게 지켜드립니다.
+            </p>
+            <hr>
+            <p>
+              Smart Security의 보안 기술이 필요하시다면 아래 문의 바랍니다.
+            </p>
+
+
+            <!-- CTA -->
+            <a target="_blank" href="" class="btn btn-grey btn-md">서비스 문의하기
+            </a>
+
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!--Section: Main info-->
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer
+  class="page-footer text-center font-small mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+    </div>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2020 Sejong University :
+      <a href="" target="_blank"> 김민지 최성연 조예진 </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+  </script>
+</body>
+
+</html>
+
+<script>
+
+  var player = document.getElementById("player");
+  var handleSuccess = function (stream) {
+    player.srcObject = stream;
+  };
+
+  navigator.mediaDevices.getUserMedia({ video: true }).then(handleSuccess);
+</script>
